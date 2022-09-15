@@ -39,11 +39,7 @@ def move_forward1():
 def turn():
     both_motors.settings(2000, 2000, 90, 90)
     both_motors.turn(105)
-def turn2():
-    both_motors.settings(2000, 2000, 90, 90)
-    both_motors.turn(315)
 
-turn()
+# turn()
 move_forward1()
 # This should finish the course from Tuesday.
-# this is a change
