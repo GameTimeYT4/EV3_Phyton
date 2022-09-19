@@ -31,6 +31,8 @@ def turn(b):
     both_motors.turn(b)
 
 # turn()
-move_forward1()
+while color.black(True)
+    move_forward1(100)
+
 # This should finish the course from Tuesday.
 #Hi I cloned the repo -Aditya
