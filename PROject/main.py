@@ -1,4 +1,5 @@
 #!/usr/bin/env pybricks-micropython
+from re import T
 from turtle import color
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
@@ -16,23 +17,49 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 # Create your objects here.
 ev3 = EV3Brick()
-color = ColorSensor(Port.3)
 left_motor = Motor(Port.A, positive_direction=Direction.CLOCKWISE)
 right_motor = Motor(Port.B, positive_direction=Direction.CLOCKWISE) 
 both_motors = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
+AARCH64 = Motor(Port.C, positive_direction=Direction.CLOCKWISE)
 
 # Write your program here.
 ev3.speaker.beep()
-def move_forward1(a):
+def forward(a):
     both_motors.settings(2000, 2000, 360, 360)
     both_motors.straight(a)
 def turn(b):
     both_motors.settings(2000, 2000, 360, 360)
     both_motors.turn(b)
+def AARCH64():
+    AARCH64.settings(2000, 2000, 360, 360)
+    AARCH64.turn(180)
+forward(292.1)
+turn(55)
+forward(101.6)
+turn(-55)
+forward(101.6*2)
+turn(55)
+forward(101.6)
+turn(-55)
+forward(812.8)
+turn(105)
+forward(635)
+turn(105)
+forward(812.8)
+turn(105)
+forward(101.6)
+AARCH64()
+forward(304.8)
+turn(-105)
+forward(101.6)
+turn(55)
+forward(101.6*2)
+turn(-55)
+forward(101.6)
+turn(55)
+forward(292.1)
 
-# turn()
-while color.black(True)
-    move_forward1(100)
+
 
 # This should finish the course from Tuesday.
 #Hi I cloned the repo -Aditya
