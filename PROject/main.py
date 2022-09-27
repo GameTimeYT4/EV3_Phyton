@@ -57,7 +57,6 @@ forward(101.6*2)
 turn(-55)
 forward(101.6)
 turn(55)
-forward(292.1)
 
 
 
