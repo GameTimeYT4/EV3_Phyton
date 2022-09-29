@@ -50,12 +50,7 @@ def forward():
     both_motors.turn(-55)
     both_motors.straight(101.6)
     both_motors.turn(55)
-def turn(b):
-    both_motors.settings(2000, 2000, 360, 360)
-    both_motors.both_motors.turn(b)
-def AARCH64():
-    AARCH64.settings(2000, 2000, 360, 360)
-    AARCH64.both_motors.turn(180)
+
 forward()
 
 
